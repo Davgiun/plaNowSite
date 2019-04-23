@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- метаданні та назва сайту -->
+    <meta charset="utf-8">
+    <title>SHOPList</title>
+    <!-- підключення css файлу -->
+    <link rel="stylesheet" href="css/shop.css">
+</head>
+<body onload="printTable();">
+<div id="myDIV" class="header">
+    <h2>SHOPList</h2>
+    <input type="text" id="name" placeholder="Title...">
+    <input type="number" id="number" placeholder="Price">
+    <span onclick="add()" class="addBtn">Add</span>
+    <input type="number" id="number1" placeholder="Amount">
+
+</div>
+
+<table cellpadding="2"  cellspacing="2" border="1" bgcolor="#dfdfdf" width="80%" align="center">
+    <thead>
+    <tr>
+        <th width="30%">Name</th>
+        <th width="20%">Price</th>
+        <th width="20%">Amount</th>
+        <th width="20%">Cost</th>
+
+    </tr>
+
+    </thead>
+    <tbody id="tableData"></tbody>
+</table>
+<ul id="myUL" >
+
+
+
+
+</ul>
+<!-- підключення javaScript -->
+<script src="js/shop.js"></script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- метаданні та назва сайту -->
+	<meta charset="utf-8">
+	<title>Autorization</title>
+	<!-- підключення css файлу -->
+	<link rel="stylesheet" href="css/LandingPage.css">
+</head>
+<body>
+	<body style="color:Black; background-color:#fefbd8">
+	<p class="topic">PLANOW.</p><br>
+
+	<div id="form">
+		<div>
+		<fieldset>
+			<legend class="title">Log In</legend>
+			<div class="element">
+				<b>Email</b><br>
+				<input type="email" id="mail" placeholder="vanyaI@gmail.com" required>
+			</div>
+			<div class="element">	 	
+				<b>Password</b><br>
+				<input type="password" id="password" required>
+			</div>
+			<button type="submit" class="button" onclick="checkLog()">
+				Login
+			</button>
+		</fieldset>
+		</div>
+
+		<div><!--форма для реєстрації-->
+		<fieldset>
+			<legend class="title">Sign Up</legend>
+			<div class="element">
+				<b>Surname</b><br>
+				<input type="text" id="surname" placeholder="Іванов" required>
+			</div>
+			<div class="element">
+				<b>Name</b><br>
+				<input type="text" id="name" placeholder="Іван"  required>
+			</div>
+			<div class="element">	 	
+				<b>Email</b><br>
+				<input type="email" id="new_mail" placeholder="vanyaI@gmail.com" required>
+			</div>
+			<div class="element">	 	
+				<b>Password</b><br>
+				<input type="password" id="new_password" required>
+			</div>
+			<div class="element">	 	
+				<b>Confirm password</b><br>
+				<input type="password" id="conf_password" required>
+			</div>
+
+			<button type="submit" class="button" onclick="checkSign()">
+				Signup
+			</button>
+		</fieldset>
+		</div>
+	</div>
+
+	<!-- підключення javaScript -->
+	<script src="js/script.js"></script>
+</body>
+</html>

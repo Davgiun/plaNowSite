@@ -1,0 +1,228 @@
+/*ініціалізація нового шрифту*/
+@font-face {
+  font-family: Pattaya;
+  src: url('../fonts/Pattaya-Regular.ttf');
+}
+
+body{
+  background: #999999;
+  margin: 0;
+}
+
+/*слайдер зображень*/
+#carousel {
+  perspective: 1200px;
+  background: #1a1a1a; 
+  padding-top: 1%;
+}
+
+#spinner {
+  -webkit-trsform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  height: 16vw;
+  -webkit-transform-origin: 50% 50% -47vw;
+  -o-transform-origin: 50% 50% -47vw;
+  -moz-transform-origin: 50% 50% -47vw;
+  -ms-transform-style: preserve-3d;
+  transform-origin: 50% 50% -47vw;
+  transition: 1s; 
+} 
+
+/*зображення на слайдері*/
+#spinner img { 
+  width: 25%;
+  position: absolute;
+  left: 37%;
+  -webkit-transform-origin: 50% 50% -47vw;
+  -o-transform-origin: 50% 50% -47vw;
+  -moz-transform-origin: 50% 50% -47vw;
+  -ms-transform-origin: 50% 50% -47vw;
+  transform-origin: 50% 50% -47vw;
+
+}
+
+#spinner img:nth-child(1){
+  -webkit-transform:rotateY(0deg);
+  -o-transform:rotateY(0deg);
+  -moz-transform:rotateY(0deg);
+  -ms-transform:rotateY(0deg);
+  transform:rotateY(0deg);
+}
+
+#spinner img:nth-child(2){ transform: rotateY(-45deg); }
+#spinner img:nth-child(3){ transform: rotateY(-90deg); }
+#spinner img:nth-child(4){ transform: rotateY(-135deg); }
+#spinner img:nth-child(5){ transform: rotateY(-180deg); }
+#spinner img:nth-child(6){ transform: rotateY(-225deg); }
+#spinner img:nth-child(7){ transform: rotateY(-270deg); }
+#spinner img:nth-child(8){ transform: rotateY(-315deg); }
+
+
+/*стрілочки слайдера*/
+#carousel .arrow { 
+  color: #fff; 
+  margin: 5%; 
+  margin-top: -12%;
+  font-size: 5vw;
+  position: relative; 
+}
+
+#carousel .arrow:hover {
+  color: #888;
+  cursor: pointer;
+}
+
+.fixed_head, .fixed_nav{
+  position: fixed;
+  left: 0;
+  width: 100%;
+}
+
+.fixed_head{
+  z-index: 2;
+  top: 0;
+}
+
+.fixed_nav{
+  z-index: 1;
+  top: 40px;
+}
+
+/*шапка*/
+#head{
+  text-align: center;
+  background: #1a1a1a; 
+  border: 1px solid black;
+  padding: 0.3%;
+  height: 36px;
+}
+
+#head .topic{
+  font-family: Pattaya;
+  color: #999999;
+  font-size: 30px;
+}
+
+/*контент сайту*/
+.tabcontent {
+  display: none;
+  padding: 10px 20px;
+  height: 100%;
+}
+
+
+/*меню*/
+#navigation{
+  border: 1px solid black;
+  text-align: center;
+  background: #1a1a1a;
+}
+
+.tablink+.tablink:before{
+  padding: 1vw;
+  content: "|";
+  font-size: 20px;
+}
+
+.tablink{
+  color: #999999;
+  display: inline-block;
+  padding: 5px 0;
+  font-family: Pattaya;
+  font-size: 20px;
+}
+
+.tablink:hover, .movie_content .content:hover, .all:hover{
+  color: #d9d9d9;
+  cursor: pointer;
+}
+
+/*посилання меню*/
+.movie_content .content{
+  color: #999999;
+}
+
+.movie_content {
+  display: none;
+  position: absolute;
+  min-width: 160px;
+  margin-left: 1vw;
+  z-index: 1;
+  border: 1px solid black;
+  background: #1a1a1a;
+}
+
+#movie:hover .movie_content{
+  display: block;
+}
+
+.exit{
+  margin-right: 4%;
+  float: right;
+  text-decoration: none;
+}
+
+/*ліве меню*/
+#left_nav, .exit{
+  font-family: Pattaya;
+  font-size: 20px;
+  cursor: pointer;
+  color: #999999;
+}
+
+#left_nav{
+  float: left;
+}
+
+#sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  background: #333333;
+  overflow-y: auto;
+  transition: 0.5s;
+  color: #999999;
+}
+
+#sidenav .closebtn {
+  text-decoration: none;
+  color: #999999;
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+#sidenav .title, #create_news .title{
+  font-family: Pattaya;
+  font-size: 23px;
+  margin-left: 10%;
+}
+
+#sidenav #coments{
+  margin: 3%;
+}
+
+#sidenav form{
+  margin-top: 10px;
+  text-align: center;
+}
+
+#sidenav input, #sidenav textarea, #create_news input, #create_news textarea{
+  width: 100%;
+}
+
+#sidenav .coment{
+  background: #a6a6a6;
+  font-size: 16px;
+  color: black;
+  border-radius: 50px;
+  padding: 2% 5%;
+}
